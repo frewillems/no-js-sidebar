@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AD+ No Javascript Support POC</title>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+	<link rel="stylesheet" href="/ad-js/public/css/main.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/reqwest/1.1.5/reqwest.min.js"></script>
+	<script src="/ad-js/public/js/main.js"></script>
+	{% if hasJavascript %}
+	<noscript>
+		{{ noJavascriptMeta|raw }}
+	</noscript>
+	{% endif %}
+</head>
+<body>
+	<div class="container">
+		<div class="article">
+			<div class="article__header" style="background-image: url('img/background_article.png')"></div>
+			<div class="article__body">
+				<div class="article__content">
+					<h1>Brand in bioscoopcomplex eist leven brandweerman</h1>
+					<p><strong>In Imagix had omstreeks 10u een zondagochtendfilm voor kinderen afgespeeld moeten worden. Er was ook een avant-première gepland. Heel het complex werd onmiddellijk ontruimd.</strong></p>
+					<p>De hulpdiensten zijn massaal ter plaatse. Volgens de eerste berichten is er een dodelijk slachtoffer te betreuren. Het zou gaan om een brandweerman. Hij werd bedolven door een stuk muur en overleed ter plaatse. Volgens nog onbevestigde berichten zou de brand aangestoken zijn.</p>
+					<p>De brand brak uit in een dancing die aan de cinema grenst. De vlammen sloegen meters hoog door het dak. De dancing is compleet vernield, een taverne liep ernstige schade op. Het bioscoopcomplex, dat 14 zalen telt, bleef grotendeels bespaard, zegt de brandweer.</p>
+					<p>Op het moment dat de brand uitbrak, was een honderdtal kandidaten van de wedstrijd Top Models België aanwezig voor een repetitie in een zaal van het complex. Ze werden allemaal zonder problemen geëvacueerd.</p>
+					<p>In Imagix had omstreeks 10u een zondagochtendfilm voor kinderen afgespeeld moeten worden. Er was ook een avant-première gepland. Heel het complex werd onmiddellijk ontruimd.</p>
+					<p>De hulpdiensten zijn massaal ter plaatse. Volgens de eerste berichten is er een dodelijk slachtoffer te betreuren. Het zou gaan om een brandweerman. Hij werd bedolven door een stuk muur en overleed ter plaatse. Volgens nog onbevestigde berichten zou de brand aangestoken zijn.</p>
+					<p>De brand brak uit in een dancing die aan de cinema grenst. De vlammen sloegen meters hoog door het dak. De dancing is compleet vernield, een taverne liep ernstige schade op. Het bioscoopcomplex, dat 14 zalen telt, bleef grotendeels bespaard, zegt de brandweer.</p>
+					<p>Op het moment dat de brand uitbrak, was een honderdtal kandidaten van de wedstrijd Top Models België aanwezig voor een repetitie in een zaal van het complex. Ze werden allemaal zonder problemen geëvacueerd.</p>
+				</div>
+				<div class="article__sidebar">
+				{% if hasJavascript == false %}
+					{% include 'sidebar.twig' %}
+				{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
